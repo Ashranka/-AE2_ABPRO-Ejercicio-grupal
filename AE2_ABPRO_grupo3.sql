@@ -19,3 +19,15 @@ CREATE TABLE Pagos(
     fecha_pago DATE NOT NULL,
     FOREIGN KEY (id_alquiler) REFERENCES Alquileres(id_alquiler)
 );
+
+
+INSERT INTO Alquileres (id_alquiler, id_cliente, id_vehiculo, fecha_inicio, fecha_fin) VALUES
+(1, 1, 2, '2025-03-10', '2025-03-15'),
+(2, 2, 1, '2025-03-12', '2025-03-16'),
+(3, 3, 3, '2025-03-20', '2025-03-22');
+
+
+INSERT INTO Pagos (id_pago, id_alquiler, monto, fecha_pago) VALUES
+(1, 1, 150.00, '2025-03-12'),
+(2, 2, 112.00, '2025-03-13'),
+(3, 3, 70.00, '2025-03-20');
